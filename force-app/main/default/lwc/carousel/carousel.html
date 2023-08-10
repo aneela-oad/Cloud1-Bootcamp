@@ -1,0 +1,16 @@
+<template>
+    <lightning-card>
+       <template for:each={animals} for:item="animal">
+          <h1 key={animal.heading}>
+               {animal.heading}
+               <div class="slds-var-m-around_medium"></div>
+          <span>{animal.type} </span>
+          <span>{animal.age} </span>
+          </h1>
+          
+       </template>
+
+    
+
+    </lightning-card>
+</template>

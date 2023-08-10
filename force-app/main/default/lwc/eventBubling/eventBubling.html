@@ -1,0 +1,14 @@
+<template>
+    
+    <lightning-card title="Event Bubling">
+        <div class="outerBox" onclick={handleouterBox}>
+            <lightning-button class="btn" variant="neutral" label="outerBox" title="outerBox" ></lightning-button>
+            <div class="middleBox" onclick={handlemiddleBox}>
+            <lightning-button class="btn" variant="destructive" label="middleBox" title="middleBox" ></lightning-button>
+                <div class="innerBox" onclick={handleinnerBox}>
+            <lightning-button class="btn" variant="success" label="innerBox" title="innerBox" ></lightning-button>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>

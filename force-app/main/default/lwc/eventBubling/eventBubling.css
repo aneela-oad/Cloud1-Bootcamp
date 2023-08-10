@@ -1,0 +1,30 @@
+.outerBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 30px;
+    background: rgb(45, 117, 117);
+    margin: 50px;
+}
+.middleBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    background: rgb(116, 116, 218);
+    padding: 30px;
+
+
+}
+.innerBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(86, 226, 180);
+    padding: 30px;
+
+}
+.btn{
+    margin: 10px;
+}

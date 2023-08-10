@@ -1,0 +1,13 @@
+<template>
+    
+    <h1 class="slds-text-heading_small">What is your name?</h1>
+    <h1 class="slds-text-heading_small"> <slot name="first"></slot> </h1>
+
+    <footer class="slds-card__footer slds-hide "> 
+        <slot name="footer" onslotchange={handleSlotChange}></slot>
+    </footer>
+
+    <h1>What is your address</h1>
+    <slot name="second"> </slot>
+    
+</template>

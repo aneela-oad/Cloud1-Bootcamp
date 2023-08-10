@@ -1,0 +1,56 @@
+<template>
+    <lightning-card icon-name="action:view_relationship" variant="base" title="Navigation Services in LWC">
+        <div class="slds-p-around_medium">
+
+            <!-- navigate to home. -->
+            <lightning-button style="margin:10px 10px ;" variant="brand-outline" label="Home"
+                onclick={navigateToHome}></lightning-button>
+
+
+            <!-- navigate to Chatter. -->
+            <lightning-button style="margin:10px 10px;" variant="brand-outline" label="Chatter"
+                onclick={navigateToChatter}></lightning-button>
+
+
+            <!-- navigate to New Account. -->
+            <lightning-button style="margin:10px 10px;" variant="brand-outline" label="New Account"
+                onclick={navigateToNewRecord}></lightning-button>
+
+
+
+            <!-- Navigate to new record with default value. -->
+            <lightning-button style="margin:10px 10px;" variant="brand-outline" label="New record with default values"
+                onclick={navigateToNewRecordWithDefaultValues}></lightning-button>
+
+
+            <!-- Navigate to File. -->
+            <lightning-button style="margin:10px 10px;" variant="brand-outline" label="Files"
+                onclick={navigateToFiles}></lightning-button>
+
+            <!-- Navigate to record page with view actions. -->
+            <lightning-button style="margin:10px 10px;" variant="brand-outline" label="View Account Record"
+                onclick={navigateToViewAccountRecord}></lightning-button>
+
+
+            <!-- Navigate to tab. -->
+            <lightning-button style="margin:10px 10px;" variant="brand-outline" label="Tab"
+                onclick={navigateToTab}></lightning-button>
+
+            <!-- Navigate to List. -->
+            <lightning-button style="margin:10px 10px;" variant="brand-outline" label="Contact List"
+                onclick={navigateToContactList}></lightning-button>
+
+            <!-- Navigate to List. -->
+            <lightning-button style="margin:10px 10px;" variant="brand-outline" label="Account Related List"
+                onclick={navigateToccountRelatedList}></lightning-button>
+
+
+            <!-- Navigate to Google. -->
+            <lightning-button style="margin: 10px 10px;" variant="brand-outline" label="Google"
+                onclick={navigateToGoogle}></lightning-button>
+                 <!-- Navigate to Google. -->
+            <lightning-button style="margin: 10px 10px;" variant="brand-outline" label="Lightning Page"
+            onclick={navigateToLightningPage}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

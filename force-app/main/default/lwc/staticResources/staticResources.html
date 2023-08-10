@@ -1,0 +1,23 @@
+<template>
+    <lightning-card icon-name="standard:user" variant="base">
+        <div class="slds-avatar slds-avatar_circle slds-avatar_large">
+            <lightning-carousel-image
+            src={image}
+            header="User logo"
+            description="Card description."
+            alternative-text="Card accessible description."
+            href="javascript:void(0);"
+            ></lightning-carousel-image>
+        </div>
+        <div class="slds-p-around_large">
+            <lightning-card title="Static Resources with Third-party JS">
+                Time is ticking {realTime}
+            </lightning-card>
+        </div>
+        <div class="slds-p-around_large">
+            <lightning-card title="Static Resources with Third-party CSS">
+                <p class="animate__animated animate__bounce animate__faster">yoo</p>
+            </lightning-card>
+        </div>
+    </lightning-card>
+</template>

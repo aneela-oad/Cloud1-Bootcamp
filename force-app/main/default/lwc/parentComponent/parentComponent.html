@@ -1,0 +1,17 @@
+<template>
+    <c-carousel animals={carouselData}></c-carousel>
+
+   <lightning-card>
+    <div class="slds-var-m-bottom_large slds-var-p-bottom_large">
+
+
+
+        <!-- ---Data passing on action--- -->
+        <lightning-input type="number" label="Enter %" onchange={handlePercentage} ></lightning-input>
+        <c-child-component got-value = {selectedVal} ></c-child-component>
+    </div>
+    
+
+    <lightning-button variant="brand" label="Reset Slider" title="ResetSlider" onclick={handleSlider}></lightning-button>
+   </lightning-card>
+</template>

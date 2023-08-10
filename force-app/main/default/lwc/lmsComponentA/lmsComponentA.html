@@ -1,0 +1,19 @@
+<template>
+    <lightning-card icon-name="standard:account" variant="base" title="LMS Communication from A to X">
+    
+        <div class="slds-m-around_medium">    
+        <lightning-input 
+       type="text"
+       label="Enter some data"
+       onkeypress={inputHandler}
+      ></lightning-input>
+      <div class="slds-m-vertical_large"></div>      
+    
+        <lightning-button 
+          variant="brand"
+          label="Publish Message" 
+          onclick={publishMessage} 
+        ></lightning-button>
+     </div>
+    </lightning-card>
+</template>
