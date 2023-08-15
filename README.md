@@ -1,18 +1,9 @@
-# Salesforce DX Project: Next Steps
+# Introduction to Lightning Web Components
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+I created this github repository to save all the practical work done while learning the lightning web components. I am using this repository to keep track of my progress, and to have a public portfolio to showcase my work. I am also sharing this repository with my colleagues, so that we can work together on these projects.
 
-## How Do You Plan to Deploy Your Changes?
+## What this repo contains?
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+This repository will include notes, code snippets and components created during this process. It will also serve as a reference for future projects.
 
-## Configure Your Salesforce DX Project
-
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+### I plan to update this repository regularly to keep track of my progress and development. 
