@@ -1,0 +1,30 @@
+<template>
+    <lightning-card icon-name="standard:account" variant="base" title="@wire and fetch user details">
+      <div class="slds-p-around_medium">
+       <template if:true={userDetails}>
+        Name - {userDetails.Name.value}
+        Email - {userDetails.Email.value}
+       </template>
+      </div>
+    </lightning-card>
+
+    <!-- getObjectInfo Adapter -->
+    <div class="slds-m-bottom_large"></div>
+    <lightning-card title="getObjectInfo Adapter">
+      <div class="slds-p-around_medium">
+          object recordTypeId - {recordTypeId}
+          object name - {apiName}
+      </div>
+    </lightning-card>
+
+    <div class="slds-m-bottom_large"></div>
+    <lightning-card title="getObjectInfos Adapter">
+      <div class="slds-p-around_medium">
+          <template for:each={objectInfos.results} for:item='objectInfo'>
+            <div key={objectInfo.result.apiName}>
+              object Name: {objectInfo.result.apiName}
+            </div>
+          </template>
+      </div>
+    </lightning-card>
+</template>

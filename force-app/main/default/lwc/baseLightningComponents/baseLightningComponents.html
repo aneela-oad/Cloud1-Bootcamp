@@ -1,0 +1,98 @@
+<template>
+    <!-- ----------LIGHTNING-RECORD-FROM------------ -->
+     <!-- ----------------------------------------------- -->
+
+    <lightning-card icon-name="standard:apps" variant="base" title='Lightning Record Form'>
+        <div class="slds-p-around_medium">
+            <div class="slds-grid">
+                <div class="slds-col slds-m-around_small">
+                    <lightning-card title="Lightning Record Form">
+                        <!-- --- Lightning record form ---. -->
+                        <lightning-record-form object-api-name={objectName} layout="compact" fields={fields}
+                            onsuccess={showSuccessMessage} columns="2" 
+                           
+                            ></lightning-record-form>
+                        </lightning-card>
+                </div>
+                <div class="slds-col slds-m-around_small">
+                    <lightning-card title="Displaying the created record">
+                        <template lwc:if={newRecordId}>
+                            <lightning-record-form record-id={newRecordId} object-api-name={objectName} layout="compact"
+                                fields={fields} mode="readonly"></lightning-record-form>
+                        </template>
+                    </lightning-card>
+                </div>
+            </div>
+
+        <div class="slds-grid">
+              <div class="slds-col slds-m-around_small">
+                    <!-- --- Lightning record edit form ---. -->
+                    <lightning-card title="Edit Form using Lightning-Record-Form">
+                        <lightning-record-form 
+                        record-id={recordId} 
+                        object-api-name={objectApiName} 
+                        layout-type="Full" 
+                        mode="edit"
+                        columns="3">     
+                        </lightning-record-form>
+                    </lightning-card>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+    <div class="slds-m-bottom_large"></div>
+
+    <!-- ----------LIGHTNING-RECORD-VIEW-FROM------------ -->
+     <!-- ----------------------------------------------- -->
+
+    <lightning-card icon-name="standard:all" variant="base" title="Lightning Record View Form">
+        <div class="slds-p-around_medium"> 
+            <lightning-record-view-form
+            record-id={recordId}
+            object-api-name={objectApiName}
+            >
+            <div class="slds-grid slds-gutters slds-p-around-medium">
+                <div class="slds-col slds-size_6-of-12">
+                    <lightning-output-field field-name={nameField}> </lightning-output-field>
+                    <lightning-output-field field-name={rating}></lightning-output-field>
+                </div>
+                <div class="slds-col-slds-size_6-of-12">
+                    <lightning-output-field field-name={industry}></lightning-output-field>
+                    <lightning-output-field field-name={id}></lightning-output-field>
+                </div>
+            </div>
+            </lightning-record-view-form>
+        </div>
+    </lightning-card>
+
+    <div class="slds-m-bottom_large"></div>
+    <!-- ----------LIGHTNING-RECORD-EDIT-FROM------------ -->
+     <!-- ----------------------------------------------- -->
+    <lightning-card icon-name="utility:ad_set" variant="base" title="Lightning Record Edit Form">
+       <div class="slds-p-around_medium">
+        <lightning-record-edit-form
+        object-api-name={contactObj}
+        >
+        <lightning-messages></lightning-messages>
+        <lightning-input-field field-name={contactName}></lightning-input-field>
+        <lightning-input-field field-name={contactDepartment}></lightning-input-field>
+        <label for="dob">Enter your age</label>
+        <lightning-input-field variant="label-hidden" field-name={contactDob} id="dob"></lightning-input-field>
+
+        <lightning-button 
+        variant="base"
+        label="cancel" 
+        onclick={handleReset}
+      ></lightning-button>
+
+        <lightning-button 
+          variant="brand"
+          label="save" 
+          type="submit"
+        ></lightning-button>
+        </lightning-record-edit-form>
+       </div>
+    </lightning-card>
+
+
+</template>

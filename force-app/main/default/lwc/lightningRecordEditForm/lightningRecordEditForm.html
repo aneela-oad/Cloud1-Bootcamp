@@ -1,0 +1,23 @@
+<template>
+    <lightning-card icon-name="utility:ad_set" variant="base" title="Lightning Record Edit Form">
+        <div class="slds-p-around_medium">
+         <lightning-record-edit-form
+         object-api-name={contactObj}
+         onsubmit={handleSubmit}
+         onsuccess={successHandler}
+         onerror={errorHandler}
+         >
+         <!-- <lightning-messages></lightning-messages> -->
+         <lightning-input label="Name" value={inputValue} onkeyup={getValue}></lightning-input>
+
+         <lightning-button 
+            class="slds-m-around_medium"
+           variant="brand"
+           label="create contact" 
+           type="submit"
+
+         ></lightning-button>
+         </lightning-record-edit-form>
+        </div>
+     </lightning-card>
+</template>
