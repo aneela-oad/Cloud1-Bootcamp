@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Apex Wire With Params">
+        <div class="slds-p-around_medium">
+            <template if:true={filteredAccountList}>
+              <template for:each={filteredAccountList} for:item="acc">
+                <div key={acc.Id} class="slds-box slds-box__xx-small">
+                  <p>Account Name - {acc.Name}</p>        
+                  <p>Account Type - {acc.typeField}</p>
+                  <p>Account Industry - {acc.Industry}</p>
+                </div>  
+              </template>
+            </template>
+            <lightning-combobox
+               name="Industry"           
+               value={comboValue}
+               options={options}
+               label="Industry"
+               onchange={handleValue}
+            ></lightning-combobox>
+          </div>
+    </lightning-card>
+</template>

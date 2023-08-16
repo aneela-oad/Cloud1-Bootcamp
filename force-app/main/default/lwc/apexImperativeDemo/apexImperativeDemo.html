@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title="Apex Imperative Methods">
+      <div class="slds-p-around_medium slds-box">
+            <lightning-button 
+              variant="brand-outline"
+              label="Call Method" 
+              onclick={handleClick} 
+            ></lightning-button>
+
+            <lightning-button class="slds-m-horzontal_medium"
+            variant="brand-outline"
+            label="Hide" 
+            onclick={closeList} 
+          ></lightning-button>
+      </div>
+      
+        <lightning-input value={keyword} onchange={handleSearch}>
+
+        </lightning-input>
+    
+      <div class="slds-p-around_medium">
+        <template if:true={accountList}>
+          <template for:each={accountList} for:item='account'>
+            <div key={account.Id} class="slds-box slds-box__xx-small">
+              <p>Account Name - {account.Name}</p>        
+              <p>Account Type - {account.typeField}</p>
+              <p>Account Industry - {account.Industry}</p>
+           </div>
+          </template>
+        </template>
+      </div>
+    </lightning-card>
+</template>

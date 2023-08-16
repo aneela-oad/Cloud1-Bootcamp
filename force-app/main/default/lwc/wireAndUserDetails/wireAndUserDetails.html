@@ -12,19 +12,73 @@
     <div class="slds-m-bottom_large"></div>
     <lightning-card title="getObjectInfo Adapter">
       <div class="slds-p-around_medium">
-          object recordTypeId - {recordTypeId}
-          object name - {apiName}
+        <div>object recordTypeId - {recordTypeId}</div>
+         <div>object name - {apiName}</div> 
       </div>
     </lightning-card>
 
     <div class="slds-m-bottom_large"></div>
     <lightning-card title="getObjectInfos Adapter">
       <div class="slds-p-around_medium">
+        <template if:true={objectInfos}>
           <template for:each={objectInfos.results} for:item='objectInfo'>
-            <div key={objectInfo.result.apiName}>
-              object Name: {objectInfo.result.apiName}
+            <div key={objectInfo.result.apiName} class="slds-m-bottom_small" >
+              object Name: {objectInfo.result.apiName} <br>
+              object Name: {objectInfo.result.defaultRecordTypeId}
             </div>
           </template>
+        </template>
       </div>
     </lightning-card>
+
+    <div class="slds-m-bottom_large"></div>
+    <lightning-card title="getPicklistValues Adapter">
+      <div class="slds-p-around_medium">
+              <lightning-combobox
+              label="Choose Industry"
+              value={selectedIndustry}
+              options={options}
+              onchange={handleOptions}
+            ></lightning-combobox>
+    <div class="slds-m-vertical_small">
+      Selected Industry: {selectedIndustry}
+    </div>
+        
+      </div>
+    </lightning-card>
+
+
+    <div class="slds-m-bottom_large"></div>
+    <lightning-card title="getPicklistValuesByRecordType Adapter">
+      <div class="slds-p-around_medium">
+              
+    <div class="slds-m-vertical_small">
+      <template if:true={accountSourceOptions}>
+        <lightning-combobox
+          name="AccountSource"
+          label="Account Source"
+          value={accountSourceValue}
+          placeholder="Select value"
+          options={accountSourceOptions}
+          onchange={handleChange} 
+        ></lightning-combobox>
+        {accountSourceValue}
+      </template>
+
+      <template if:true={ratingOptions}>
+        <lightning-combobox
+          name="Rating"
+          label="Rating"
+          value={ratingValue}
+          placeholder="Select value"
+          options={ratingOptions}
+          onchange={handleChange} 
+        ></lightning-combobox>
+        {ratingValue}
+      </template>
+    </div>
+        
+      </div>
+    </lightning-card>
+
 </template>
