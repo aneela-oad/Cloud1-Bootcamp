@@ -1,14 +1,14 @@
 import { LightningElement, api } from 'lwc';
 
 export default class SetterDemoChild extends LightningElement {
-    userDetails
+    userInfo
     @api 
     get details() {
-        return  this.userDetails
+        return  this.userInfo
     }
     set details(data){
        let newAge = data.age+5
-        this.userDetails = {...data, age:newAge, "Location":"Lahore"}
+        this.userInfo = {...data, age:newAge, "Location":"Lahore"}
         
     }
 }
