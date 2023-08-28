@@ -1,9 +1,12 @@
-public class Child extends Parent{
-    public Child() {
-
-    }
-    public static void show() {
-        String msg = 'Hello from child class';
-        System.debug(mg);
+public class Child{
+    public static void ret(){
+        
+   	EmployeePurchaseOrder emp = new EmployeePurchaseOrder();
+    double empDis = emp.discount()*2;
+    System.debug('Employee Discount: ' +empDis);
+        
+    CustomerPurchaseOrder cus = new CustomerPurchaseOrder();
+    double cusDis = cus.discount()*2;
+        System.debug('Customer Discount: ' +cusDis);
     }
 }
