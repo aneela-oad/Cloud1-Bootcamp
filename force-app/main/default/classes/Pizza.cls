@@ -19,9 +19,11 @@ public abstract with sharing class Pizza {
     }
     public void cut(){
         System.debug('Cutting ' +name);
+        System.debug('dough ' +dough);
     }
     public void box(){
         System.debug('Boxing ' +name);
+        System.debug('With sauce ' +sauce);
     }
 
 // method to show ingredients of a pizza
