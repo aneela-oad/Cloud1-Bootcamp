@@ -3,12 +3,18 @@ public class ApexDatabaseClass {
     public static void insetAccounts(){
         List<Account> accounts = new List<Account>();
         Account acc = new Account();  
-        acc.Name = 'Google';
+        acc.Name = 'Microsoft';
         accounts.add(acc);
         
         Account acc1 = new Account();
-        acc1.Name = 'Cloud-1';
+        acc.Name = 'Salesforce';
         accounts.add(acc1);
-        Database.insert(accounts, FALSE);
+        Database.SaveResult[] insertedList = Database.insert(accounts, FALSE);
+        
+        for( Database.SaveResult sr: insertedList ){
+            if(sr.isSuccess()){
+                
+            }
+        }
     }
 }
