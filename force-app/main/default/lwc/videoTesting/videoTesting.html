@@ -1,17 +1,8 @@
 <template>
-    <lightning-card icon-name="custom:custom21" class="forceBaseCard">
-       
-              <video
-                controls
-                preload="auto"
-             
-                src={currentVideoUrl}
-                
-              >
-              </video>
-              testing
-          
-              <embed src="" type=""  wmode="transparent">
-        
-      </lightning-card>
+	<lightning-card icon-name="custom:custom21" class="forceBaseCard">
+   <video src={videoUrl}></video>
+   --------------------------
+      <iframe src={videoUrl} frameborder="0"></iframe>
+
+	</lightning-card>
 </template>

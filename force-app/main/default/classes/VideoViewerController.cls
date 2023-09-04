@@ -2,10 +2,10 @@ public with sharing class VideoViewerController {
     public VideoViewerController() {
 
     }
-    @AuraEnabled
-  
+ @AuraEnabled(cacheable=true)
     public static String getBaseUrl() {
-        // return System.URL.getOrgDomainUrl().toExternalForm();
-        return 'https://www.youtube.com/watch?v=SO21BH6vTC4';
+        String url = 'https://www.youtube.com/watch?v=SO21BH6vTC4';
+        System.debug('video url ' +url);
+        return url;
       }
 }
